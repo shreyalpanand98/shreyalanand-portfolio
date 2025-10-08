@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Shreyal — Portfolio</title>
+        <meta name="description" content="Projects, skills, and contact info." />
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"> -->
+    </head>
+    <body>
+        <!-- Header / Nav -->
+        <header>
+            <nav aria-label="Primary" class="container">
+                <a href="#home" aria-label="Homepage" class="logo">Shreyal Anand</a>
+
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <!-- Social links section -->
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="mailto:you@example.com" aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <!-- Placeholder for the rest of the page so links have targets (optional while testing) -->
+        <main id="main-content">
+            <!-- ===== About Section ===== -->
+            <section id="home" aria-label="Hero" class="hero">
+                <div class="container">
+                    <div class="hero-text">
+                        <h1>Shreyal Anand</h1>
+                        <p class="hero-subtitle">Software Dev Engineer | Full Stack Developer | Data Science</p>
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-outline">View Projects</a>
+                            <a href="#contact" class="btn btn-primary">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <figure class="hero-photo">
+                    <img src="images/profilePic.jpeg" alt="Portrait of Shreyal" />
+                    <figcaption>A short tagline about you goes here.</figcaption>
+                </figure>
+
+                <!-- optional curved bottom divider -->
+                <div class="hero-curve" aria-hidden="true">
+                    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                        <path d="M0,80 C300,140 1140,0 1440,60 L1440,120 L0,120 Z"></path>
+                    </svg>
+                </div>
+            </section>
+            <!-- ===== About ===== -->
+            <section id="about" class="about" aria-label="About">
+                <div class="container">
+                    <h1 class="sectionHead">About Me</h1>
+                    <p class="about-intro">
+                        Experienced Software Engineer skilled in full-stack development, agile methodologies, and data-driven problem solving. Proficient in Docker, AWS, Golang, Python, and SQL with a strong record of delivering high-quality solutions under tight deadlines. Committed to continuous learning and effective collaboration across teams.
+                    </p>
+
+                    <div class="about-grid">
+                        <div>
+                        <h3>Quick Facts</h3>
+                        <dl class="about-list">
+                            <div><dt>Location</dt><dd>San Jose, CA</dd></div>
+                            <div><dt>Core Skills</dt><dd>AWS, Python, Java, Javascript, React, GraphQL, DynamoDB, SQL, Docker</dd></div>
+                            <div><dt>Focus</dt><dd>Data Science, Backend Engineering, Analytics, Frontend Development</dd></div>
+                            <div><dt>Collaboration</dt><dd>Cross-functional, stakeholder-facing</dd></div>
+                        </dl>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== Experience ===== -->
+            <section id="experience" class="xp" aria-label="Experience">
+                <div class="container">
+                    <h1>Professional Experience</h1>
+
+                    <article class="xp-card">
+                        <div class="xp-left">
+                            <img src="images/amzLogo.jpeg" alt="Amazon.com logo">
+                        </div>
+
+                        <div class="xp-right">
+                            <header class="xp-head">
+                                <div>
+                                    <h3 class="xp-role">Software Development Engineer</h3>
+                                    <p class="xp-company">Amazon.com</p>
+                                </div>
+                                <span class="xp-badge">August 2024 – Present</span>
+                            </header>
+
+                            <ul class="xp-points">
+                                <li>Developed supervised learning algorithms (logistic regression, SVM) to classify document relevance (~80% accuracy) for BERT training.</li>
+                                <li>Built quantitative analysis and visualizations in Python (NumPy, Pandas, Jupyter).</li>
+                                <li>Drove recommendations using Tableau dashboards for e-commerce/media stakeholders.</li>
+                                <li>Projected to raise customer satisfaction by 20% by Q4 2023 via policy changes.</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="xp-card">
+                        <div class="xp-left">
+                            <img src="images/Unity.jpeg" alt="Unity logo">
+                        </div>
+
+                        <div class="xp-right">
+                            <header class="xp-head">
+                                <div>
+                                    <h3 class="xp-role">Fullstack Software Engineer</h3>
+                                    <p class="xp-company">Unity Technologies</p>
+                                </div>
+                                <span class="xp-badge">August 2022 – August 2024</span>
+                            </header>
+
+                            <ul class="xp-points">
+                                <li>Developed supervised learning algorithms (logistic regression, SVM) to classify document relevance (~80% accuracy) for BERT training.</li>
+                                <li>Built quantitative analysis and visualizations in Python (NumPy, Pandas, Jupyter).</li>
+                                <li>Drove recommendations using Tableau dashboards for e-commerce/media stakeholders.</li>
+                                <li>Projected to raise customer satisfaction by 20% by Q4 2023 via policy changes.</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="xp-card">
+                        <div class="xp-left">
+                            <img src="images/Concur1.jpeg" alt="Sap logo">
+                        </div>
+
+                        <div class="xp-right">
+                            <header class="xp-head">
+                                <div>
+                                    <h3 class="xp-role">Software Engineer Intern</h3>
+                                    <p class="xp-company">Sap Concur</p>
+                                </div>
+                                <span class="xp-badge">June 2020 – Feb 2021</span>
+                            </header>
+
+                            <ul class="xp-points">
+                                <li>Developed supervised learning algorithms (logistic regression, SVM) to classify document relevance (~80% accuracy) for BERT training.</li>
+                                <li>Built quantitative analysis and visualizations in Python (NumPy, Pandas, Jupyter).</li>
+                                <li>Drove recommendations using Tableau dashboards for e-commerce/media stakeholders.</li>
+                                <li>Projected to raise customer satisfaction by 20% by Q4 2023 via policy changes.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p style="text-align:center; color:#555; padding:1rem 0;">© 2025 Shreyal</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,222 @@
+/* ================== Global ================== */
+:root{
+  /* tweak these two to nudge overall left start & max content width */
+  --page-left: clamp(20px, 6vw, 80px);  
+  --max-width: 2300px; 
+  --min-width: 1000px;                
+  --bg-app: #f9fafb;
+  --bg-hero: linear-gradient(180deg,#eaf1f7 0%,#e5ecf3 60%,#e8eef5 100%);
+  --ink-900:#0b0c10; --ink-700:#334155; --ink-600:#475569;
+  --accent:#22d3ee;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+html,body{ font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background:var(--bg-app); color:var(--ink-900); scroll-behavior:smooth; }
+
+/* One container used across header/sections (aligned slightly left) */
+.container{
+  max-width: var(--max-width);
+  margin-left: var(--page-left);   /* pull content slightly left instead of centering */
+  margin-right: auto;
+  padding-right: clamp(16px, 3vw, 32px); /* keep some right breathing room */
+}
+
+/* ================== Header / Nav ================== */
+header{
+  position: sticky; top:0; z-index:1000;
+  background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+nav[aria-label="Primary"]{ display:flex; align-items:center; justify-content:space-between; padding: 12px 0; }
+.logo{ font-size:1.6rem; font-weight:700; color:#111; text-decoration:none; }
+nav ul{ list-style:none; display:flex; gap:1.5rem; }
+nav a{ color:#111; text-decoration:none; font-weight:600; transition:color .2s; }
+nav a:hover, .logo:hover{ color:var(--accent); }
+.social-links{ display:flex; gap:1rem; }
+.social-links a{ color:#111; }
+.social-links a:hover{ color:var(--accent); }
+
+/* ================== Hero ================== */
+/* Full-bleed background; grid inside section so your figure outside .container still aligns */
+.hero{
+  width:100%;
+  background:var(--bg-hero);
+  padding: clamp(56px,7vw,104px) 0 clamp(84px,10vw,140px);
+  display:grid;
+  grid-template-columns: minmax(0,1fr) minmax(240px, 28vw); /* left: content, right: photo */
+  align-items:center;
+  column-gap: clamp(16px, 3.5vw, 40px);
+  position:relative;
+}
+.hero > .container{ width:100%; } /* left column (text) */
+.hero-text h1{ font-size: clamp(2.2rem, 4.5vw, 3.25rem); line-height:1.1; font-weight:800; color:var(--ink-900); }
+.hero-subtitle{ font-size:clamp(1rem,2vw,1.35rem); color:var(--ink-700); margin:.5rem 0 1.25rem; }
+.hero-actions{ display:flex; gap:1rem; flex-wrap:wrap; }
+
+.btn{ display:inline-block; font-weight:700; text-decoration:none; border-radius:12px; padding:.8rem 1.2rem; transition:transform .15s, box-shadow .15s, background .15s, color .15s; }
+.btn-outline{ border:2px solid #c6d3e2; color:#111; background:transparent; }
+.btn-outline:hover{ background:#f1f5f9; }
+.btn-primary{ background:#111827; color:#fff; box-shadow:0 6px 20px rgba(0,0,0,.12); }
+.btn-primary:hover{ transform: translateY(-1px); }
+
+/* Photo column (the figure outside .container) */
+.hero-photo{ display:grid; place-items:center; }
+.hero-photo img{
+  width: clamp(150px, 18vw, 300px);
+  height: clamp(150px, 18vw, 300px);
+  border-radius:100%; object-fit:cover;
+  background:#fff; border:6px solid #fff; box-shadow:0 12px 40px rgba(2,6,23,.18);
+}
+.hero-photo figcaption{ font-size:.9rem; color:#555; margin-top:.5rem; }
+
+/* Curved bottom separator */
+.hero-curve{ position:absolute; left:0; right:0; bottom:-1px; height:110px; overflow:hidden; }
+.hero-curve svg{ width:100%; height:100%; display:block; }
+.hero-curve path{ fill: var(--bg-app); }
+
+/* ================== About ================== */
+#about{ background:#fff; padding: clamp(56px,7vw,96px) 0; }
+#about .sectionHead{ font-size: clamp(1.8rem, 3.2vw, 2.4rem); margin-bottom:1.2rem; }
+.about-intro{ font-size:1.05rem; line-height:1.75; color:var(--ink-600); margin-bottom:2rem; max-width:70ch; }
+.about-grid{ display:block; }
+.about-list{ margin:0; padding:0; max-width: 900px; }
+.about-list div{ display:grid; grid-template-columns: 180px 1fr; gap: clamp(.75rem,2.5vw,1.5rem); padding:.8rem 0; border-bottom:1px solid #e5e7eb; }
+.about-list div:last-child{ border-bottom:0; }
+.about-list dt{ font-weight:700; color:var(--ink-900); }
+.about-list dd{ margin:0; color:var(--ink-700); line-height:1.6; }
+
+/* ================== Experience ================== */
+#experience{ background: var(--bg-hero); padding: clamp(56px,7vw,96px) 0; }
+#experience h1{ font-size: clamp(1.8rem, 3.2vw, 2.4rem); margin-bottom:1.5rem; }
+
+.xp-card {
+  display: grid;
+  grid-template-columns: clamp(220px, 26vw, 360px) 1fr;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid #e6ebf2;
+  border-radius: 18px;
+  padding: 1.25rem 1.75rem;
+  margin: 1.25rem 0;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04),
+              0 8px 24px rgba(16, 24, 40, 0.06);
+  align-items: center;
+  /* margin-bottom: 20px; */
+}
+
+/* Keeps logo neatly scaled */
+.xp-left img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Logo panel — logo must cover fully */
+.xp-left{
+  background:#eef4fa;
+  border-radius:12px;
+  overflow:hidden;
+  display:flex;
+  align-items:stretch;   /* let image stretch full height */
+  /* justify-content:center; */
+}
+
+/* Right: text */
+.xp-right{ display:flex; flex-direction:column; justify-content:center; }
+.xp-head{ 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:flex-start; 
+    gap:1rem; 
+    margin-bottom:.75rem; 
+    box-shadow: none;
+}
+.xp-role{ margin:0; font-size:1.2rem; font-weight:800; color:var(--ink-900); }
+.xp-company{ margin:.2rem 0 0; color:#6b7280; font-size:.96rem; }
+.xp-badge{
+  white-space:nowrap; background:#e2e8f0; color:#111827;
+  border:1px solid #d6e0ee; padding:.35rem 1rem; border-radius:999px;
+  font-weight:700; font-size:.92rem; box-shadow:none;
+}
+.xp-points{ margin:.5rem 0 0; padding-left:1.15rem; color:var(--ink-600); line-height:1.7; }
+
+/* ================== Footer ================== */
+footer{ text-align:center; padding:1.5rem 0; color:#555; background:#f1f5f9; }
+
+/* ================== Responsive ================== */
+@media (max-width: 1024px){
+  .hero{ grid-template-columns: minmax(0,1fr) 280px; }
+}
+@media (max-width: 900px){
+  .hero{ grid-template-columns: 1fr; }
+  .hero > .container{ margin-left: auto; margin-right:auto; padding: 0 clamp(16px,4vw,24px); }
+  .hero-photo{ order:-1; }
+  .container{ margin-left:auto; margin-right:auto; padding: 0 clamp(16px,4vw,24px); max-width: var(--max-width); }
+
+  .xp-card{ grid-template-columns: 1fr; }
+  .xp-left{ order:-1; aspect-ratio: 16 / 9; }
+}
+
+#experience .xp-card {
+  max-width: calc(var(--max-width) - var(--page-left));
+  margin-left: 0;
+  margin-right: auto;
+  border-radius: 18px;
+  padding: 1.25rem 1.75rem;
+  background: #fff;
+  border: 1px solid #e6ebf2;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04),
+              0 8px 24px rgba(16, 24, 40, 0.06);
+}
+
+/* --- Social icons: consistent sizing & spacing --- */
+.social-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid #c8d3e6;
+  border-radius: 12px;
+  color: #111;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.social-links a:hover {
+  background: #eef4fa;
+  border-color: #b9c6dc;
+}
+
+/* --- Keep nav tidy on medium screens --- */
+@media (max-width: 1080px) {
+  nav[aria-label="Primary"] { gap: 10px; }
+  nav[aria-label="Primary"] ul { gap: 1rem; font-size: 0.95rem; }
+  .logo { font-size: 1.35rem; }
+}
+
+/* --- Small screens: hide text menu, keep icons right-aligned --- */
+@media (max-width: 860px) {
+  nav[aria-label="Primary"] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav[aria-label="Primary"] ul { display: none; }
+  .social-links { margin-left: auto; }
+  .logo { font-size: 1.2rem; }
+  .social-links a { width: 34px; height: 34px; border-radius: 10px; }
+}
+
+/* --- Very small phones: tighten a hair more --- */
+@media (max-width: 420px) {
+  .social-links { gap: 10px; }
+  .social-links a { width: 32px; height: 32px; }
+}
