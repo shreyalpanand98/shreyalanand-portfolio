@@ -1,522 +1,812 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Shreyal — Portfolio</title>
-        <meta name="description" content="Projects, skills, and contact info." />
-        <link rel="stylesheet" href="styles.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        />
-        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shreyal — Portfolio</title>
+    <meta name="description" content="Projects, skills, and contact info." />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"> -->
-    </head>
-    <body>
-        <!-- Header / Nav -->
-        <header>
-            <nav aria-label="Primary" class="container">
-                <a href="#home" aria-label="Homepage" class="logo">Shreyal Anand</a>
+  </head>
+  <body>
+    <!-- Header / Nav -->
+    <header>
+      <nav aria-label="Primary" class="container">
+        <a href="#home" aria-label="Homepage" class="logo">Shreyal Anand</a>
 
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Social links section -->
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/shreyalanand"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://github.com/shreyalpanand98"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="mailto:shreyalpanand98@gmail.com" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!-- Placeholder for the rest of the page so links have targets (optional while testing) -->
+    <main id="main-content">
+      <!-- ===== About Section ===== -->
+      <section id="home" aria-label="Hero" class="hero">
+        <div class="container">
+          <div class="hero-text">
+            <h1>Shreyal Anand</h1>
+            <p class="hero-subtitle">
+              Software Dev Engineer | Full Stack Developer | Data Science
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-outline">View Projects</a>
+              <a href="#contact" class="btn btn-primary">Contact</a>
+            </div>
+          </div>
+        </div>
+
+        <figure class="hero-photo">
+          <img src="images/profilePic.jpeg" alt="Portrait of Shreyal" />
+        </figure>
+
+        <!-- optional curved bottom divider -->
+        <div class="hero-curve" aria-hidden="true">
+          <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,80 C300,140 1140,0 1440,60 L1440,120 L0,120 Z"></path>
+          </svg>
+        </div>
+      </section>
+      <!-- ===== About ===== -->
+      <section id="about" class="about" aria-label="About">
+        <div class="container">
+          <h1 class="sectionHead">About Me</h1>
+          <p class="about-intro">
+            Experienced Software Engineer skilled in full-stack development,
+            agile methodologies, and data-driven problem solving. Proficient in
+            Docker, AWS, Golang, Python, and SQL with a strong record of
+            delivering high-quality solutions under tight deadlines. Committed
+            to continuous learning and effective collaboration across teams.
+          </p>
+
+          <div class="about-grid">
+            <div>
+              <h3>Quick Facts</h3>
+              <br />
+              <dl class="about-list">
+                <div>
+                  <dt>Location</dt>
+                  <dd>San Jose, CA</dd>
+                </div>
+                <div>
+                  <dt>Core Skills</dt>
+                  <dd>
+                    AWS, Python, Java, Javascript, React, GraphQL, DynamoDB,
+                    SQL, Docker
+                  </dd>
+                </div>
+                <div>
+                  <dt>Focus</dt>
+                  <dd>
+                    Data Science, Backend Engineering, Analytics, Frontend
+                    Development
+                  </dd>
+                </div>
+                <div>
+                  <dt>Collaboration</dt>
+                  <dd>Cross-functional, stakeholder-facing</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Education =====-->
+      <section id="education" class="edu" aria-label="Education">
+        <div class="container">
+          <h1>Academic Experience</h1>
+
+          <!-- Graduate -->
+          <article class="edu-card">
+            <div class="edu-left">
+              <img src="images/CTULogo.jpeg" alt="CTU logo" />
+            </div>
+            <div class="edu-right">
+              <header class="edu-head">
+                <div>
+                  <h3 class="edu-school">
+                    Colorado Technical University, Denver
+                  </h3>
+                  <p class="edu-degree">M.S. in Computer Science</p>
+                </div>
+                <div class="edu-meta">
+                  <span class="edu-badge">March 2021 - August 2022</span>
+                  <span class="edu-gpa">GPA: 3.8/4.0</span>
+                </div>
+              </header>
+              <p class="edu-courses">
+                Relevant coursework: Advanced Machine Learning, Natural Language
+                Processing, Data Visualization, Statistical Methods
+              </p>
+            </div>
+          </article>
+
+          <!-- Undergraduate -->
+          <article class="edu-card">
+            <div class="edu-left">
+              <img src="images/UWLogo.jpeg" alt="UW Seattle logo" />
+            </div>
+            <div class="edu-right">
+              <header class="edu-head">
+                <div>
+                  <h3 class="edu-school">University of Washington, Seattle</h3>
+                  <p class="edu-degree">
+                    B.A. in Geographical Information Systems
+                  </p>
+                </div>
+                <div class="edu-meta">
+                  <span class="edu-badge">September 2016 - December 2020</span>
+                  <span class="edu-gpa">GPA: 3.5/4.0</span>
+                </div>
+              </header>
+              <p class="edu-courses">
+                Relevant coursework: Data Structures, Machine Learning, Database
+                Systems, Statistical Inference, Data Analysis
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== Experience ===== -->
+      <section id="experience" class="xp" aria-label="Experience">
+        <div class="container">
+          <h1>Professional Experience</h1>
+
+          <article class="xp-card">
+            <div class="xp-left">
+              <img src="images/amzLogo.jpeg" alt="Amazon.com logo" />
+            </div>
+
+            <div class="xp-right">
+              <header class="xp-head">
+                <div>
+                  <h3 class="xp-role">Software Development Engineer</h3>
+                  <p class="xp-company">Amazon.com</p>
+                </div>
+                <span class="xp-badge">August 2024 – Present</span>
+              </header>
+
+              <ul class="xp-points">
+                <li>
+                  Developed supervised learning algorithms (logistic regression,
+                  SVM) to classify document relevance (~80% accuracy) for BERT
+                  training.
+                </li>
+                <li>
+                  Built quantitative analysis and visualizations in Python
+                  (NumPy, Pandas, Jupyter).
+                </li>
+                <li>
+                  Drove recommendations using Tableau dashboards for
+                  e-commerce/media stakeholders.
+                </li>
+                <li>
+                  Projected to raise customer satisfaction by 20% by Q4 2023 via
+                  policy changes.
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="xp-card">
+            <div class="xp-left">
+              <img src="images/Unity.jpeg" alt="Unity logo" />
+            </div>
+
+            <div class="xp-right">
+              <header class="xp-head">
+                <div>
+                  <h3 class="xp-role">Fullstack Software Engineer</h3>
+                  <p class="xp-company">Unity Technologies</p>
+                </div>
+                <span class="xp-badge">August 2022 – August 2024</span>
+              </header>
+
+              <ul class="xp-points">
+                <li>
+                  Developed supervised learning algorithms (logistic regression,
+                  SVM) to classify document relevance (~80% accuracy) for BERT
+                  training.
+                </li>
+                <li>
+                  Built quantitative analysis and visualizations in Python
+                  (NumPy, Pandas, Jupyter).
+                </li>
+                <li>
+                  Drove recommendations using Tableau dashboards for
+                  e-commerce/media stakeholders.
+                </li>
+                <li>
+                  Projected to raise customer satisfaction by 20% by Q4 2023 via
+                  policy changes.
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="xp-card">
+            <div class="xp-left">
+              <img src="images/Concur1.jpeg" alt="Sap logo" />
+            </div>
+
+            <div class="xp-right">
+              <header class="xp-head">
+                <div>
+                  <h3 class="xp-role">Software Engineer Intern</h3>
+                  <p class="xp-company">Sap Concur</p>
+                </div>
+                <span class="xp-badge">June 2020 – Feb 2021</span>
+              </header>
+
+              <ul class="xp-points">
+                <li>
+                  Developed supervised learning algorithms (logistic regression,
+                  SVM) to classify document relevance (~80% accuracy) for BERT
+                  training.
+                </li>
+                <li>
+                  Built quantitative analysis and visualizations in Python
+                  (NumPy, Pandas, Jupyter).
+                </li>
+                <li>
+                  Drove recommendations using Tableau dashboards for
+                  e-commerce/media stakeholders.
+                </li>
+                <li>
+                  Projected to raise customer satisfaction by 20% by Q4 2023 via
+                  policy changes.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- ===== Projects ===== -->
+      <section id="projects" class="projects" aria-label="Projects">
+        <div class="container">
+          <h1>Projects</h1>
+
+          <div class="proj-grid">
+            <!-- === Card 1 === -->
+            <article class="proj-card">
+              <figure class="proj-media">
+                <img
+                  src="images/RPSGame.jpeg"
+                  alt="Rock, Paper, Scissors game image"
+                />
+              </figure>
+
+              <div class="proj-body">
+                <header class="proj-head">
+                  <h3 class="proj-title">Rock, Paper, Scissors Game</h3>
+                  <p class="proj-subtitle">Frontend Project</p>
+                </header>
+
+                <p class="proj-desc">Description</p>
+
+                <ul class="proj-tags" aria-label="Technologies used">
+                  <li>Javascript</li>
+                  <li>ReactJS</li>
+                  <li></li>
+                  <li>FastAPI</li>
+                  <li>Hugging Face</li>
                 </ul>
 
-                <!-- Social links section -->
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/shreyalanand" target="_blank" aria-label="LinkedIn">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/shreyalpanand98" target="_blank" aria-label="GitHub">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="mailto:shreyalpanand98@gmail.com" aria-label="Email">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
+                <div class="proj-outcomes">
+                  <h4>Outcomes:</h4>
+                  <ul>
+                    <li>1.</li>
+                    <li>2.</li>
+                    <li>3.</li>
+                  </ul>
                 </div>
-            </nav>
-        </header>
-        <!-- Placeholder for the rest of the page so links have targets (optional while testing) -->
-        <main id="main-content">
-            <!-- ===== About Section ===== -->
-            <section id="home" aria-label="Hero" class="hero">
-                <div class="container">
-                    <div class="hero-text">
-                        <h1>Shreyal Anand</h1>
-                        <p class="hero-subtitle">Software Dev Engineer | Full Stack Developer | Data Science</p>
-                        <div class="hero-actions">
-                            <a href="#projects" class="btn btn-outline">View Projects</a>
-                            <a href="#contact" class="btn btn-primary">Contact</a>
-                        </div>
-                    </div>
-                </div>
+              </div>
 
-                <figure class="hero-photo">
-                    <img src="images/profilePic.jpeg" alt="Portrait of Shreyal" />
-                    <figcaption>A short tagline about you goes here.</figcaption>
-                </figure>
+              <footer class="proj-foot">
+                <a
+                  class="btn btn-primary"
+                  href="https://shreyalpanand98.github.io/rock-paper-scissors-game/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Project
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </footer>
+            </article>
 
-                <!-- optional curved bottom divider -->
-                <div class="hero-curve" aria-hidden="true">
-                    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                        <path d="M0,80 C300,140 1140,0 1440,60 L1440,120 L0,120 Z"></path>
-                    </svg>
-                </div>
-            </section>
-            <!-- ===== About ===== -->
-            <section id="about" class="about" aria-label="About">
-                <div class="container">
-                    <h1 class="sectionHead">About Me</h1>
-                    <p class="about-intro">
-                        Experienced Software Engineer skilled in full-stack development, agile methodologies, and data-driven problem solving. Proficient in Docker, AWS, Golang, Python, and SQL with a strong record of delivering high-quality solutions under tight deadlines. Committed to continuous learning and effective collaboration across teams.
-                    </p>
+            <!-- === Card 2 === -->
+            <article class="proj-card">
+              <figure class="proj-media">
+                <img
+                  src="images/PlaceholderImg.jpg"
+                  alt="Medical visualization of lungs for COPD analysis project"
+                />
+              </figure>
 
-                    <div class="about-grid">
-                        <div>
-                        <h3>Quick Facts</h3>
-                        <br>
-                        <dl class="about-list">
-                            <div><dt>Location</dt><dd>San Jose, CA</dd></div>
-                            <div><dt>Core Skills</dt><dd>AWS, Python, Java, Javascript, React, GraphQL, DynamoDB, SQL, Docker</dd></div>
-                            <div><dt>Focus</dt><dd>Data Science, Backend Engineering, Analytics, Frontend Development</dd></div>
-                            <div><dt>Collaboration</dt><dd>Cross-functional, stakeholder-facing</dd></div>
-                        </dl>
-                        </div>
-                    </div>
-                </div>
-            </section>
+              <div class="proj-body">
+                <header class="proj-head">
+                  <h3 class="proj-title">ABCD</h3>
+                  <p class="proj-subtitle">&amp; ABCD</p>
+                </header>
 
-            <!-- ===== Education =====-->
-            <section id="education" class="edu" aria-label="Education">
-            <div class="container">
-                <h1>Academic Experience</h1>
+                <p class="proj-desc">Description</p>
 
-                <!-- Graduate -->
-                <article class="edu-card">
-                <div class="edu-left">
-                    <img src="images/CTULogo.jpeg" alt="CTU logo">
-                </div>
-                <div class="edu-right">
-                    <header class="edu-head">
-                    <div>
-                        <h3 class="edu-school">Colorado Technical University, Denver</h3>
-                        <p class="edu-degree">M.S. in Computer Science</p>
-                    </div>
-                    <div class="edu-meta">
-                        <span class="edu-badge">March 2021 - August 2022</span>
-                        <span class="edu-gpa">GPA: 3.8/4.0</span>
-                    </div>
-                    </header>
-                    <p class="edu-courses">
-                    Relevant coursework: Advanced Machine Learning, Natural Language Processing,
-                    Data Visualization, Statistical Methods
-                    </p>
-                </div>
-                </article>
+                <ul class="proj-tags" aria-label="Technologies used">
+                  <li>Python</li>
+                  <li>Statistical Modeling</li>
+                  <li>Random Forest</li>
+                  <li>GLM</li>
+                </ul>
 
-                <!-- Undergraduate -->
-                <article class="edu-card">
-                <div class="edu-left">
-                    <img src="images/UWLogo.jpeg" alt="UW Seattle logo">
+                <div class="proj-outcomes">
+                  <h4>Outcomes:</h4>
+                  <ul>
+                    <li>1.</li>
+                    <li>2.</li>
+                    <li>3.</li>
+                  </ul>
                 </div>
-                <div class="edu-right">
-                    <header class="edu-head">
-                    <div>
-                        <h3 class="edu-school">University of Washington, Seattle</h3>
-                        <p class="edu-degree">B.A. in Geographical Information Systems</p>
-                    </div>
-                    <div class="edu-meta">
-                        <span class="edu-badge">September 2016 - December 2020</span>
-                        <span class="edu-gpa">GPA: 3.5/4.0</span>
-                    </div>
-                    </header>
-                    <p class="edu-courses">
-                    Relevant coursework: Data Structures, Machine Learning, Database Systems,
-                    Statistical Inference, Data Analysis
-                    </p>
+              </div>
+
+              <footer class="proj-foot">
+                <a
+                  class="btn btn-primary"
+                  href="https://example.com/copd"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Project
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Skills ===== -->
+      <section id="skills" class="skills" aria-label="Skills">
+        <div class="container">
+          <h1>Skills</h1>
+
+          <!-- Tabs (static HTML; style/JS optional) -->
+          <nav class="skills-tabs" role="tablist" aria-label="Skill categories">
+            <button
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-programming"
+              id="tab-programming"
+              class="tab is-active"
+            >
+              Programming
+            </button>
+            <button
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-ml"
+              id="tab-ml"
+              class="tab"
+              tabindex="-1"
+            >
+              Machine Learning
+            </button>
+            <button
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-data-tools"
+              id="tab-data-tools"
+              class="tab"
+              tabindex="-1"
+            >
+              Data Tools
+            </button>
+            <button
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-other"
+              id="tab-other"
+              class="tab"
+              tabindex="-1"
+            >
+              Other
+            </button>
+          </nav>
+
+          <!-- Panel: Programming (visible by default) -->
+          <div
+            id="panel-programming"
+            role="tabpanel"
+            aria-labelledby="tab-programming"
+          >
+            <div class="skills-grid">
+              <!-- Card -->
+              <article class="skill-card" aria-label="Python">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">P</div>
+                  <h3 class="skill-name">Python</h3>
                 </div>
-                </article>
+              </article>
+
+              <article class="skill-card" aria-label="R">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">R</div>
+                  <h3 class="skill-name">R</h3>
+                </div>
+              </article>
+
+              <article class="skill-card" aria-label="SQL">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">S</div>
+                  <h3 class="skill-name">SQL</h3>
+                </div>
+              </article>
+
+              <article class="skill-card" aria-label="Java">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">J</div>
+                  <h3 class="skill-name">Java</h3>
+                </div>
+              </article>
+
+              <article class="skill-card" aria-label="C++">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">C</div>
+                  <h3 class="skill-name">C++</h3>
+                </div>
+              </article>
+
+              <article class="skill-card" aria-label="HTML/CSS">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">H</div>
+                  <h3 class="skill-name">HTML/CSS</h3>
+                </div>
+              </article>
+
+              <article class="skill-card" aria-label="JavaScript">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">J</div>
+                  <h3 class="skill-name">JavaScript</h3>
+                </div>
+              </article>
             </div>
-            </section>
+          </div>
 
-            <!-- ===== Experience ===== -->
-            <section id="experience" class="xp" aria-label="Experience">
-                <div class="container">
-                    <h1>Professional Experience</h1>
-
-                    <article class="xp-card">
-                        <div class="xp-left">
-                            <img src="images/amzLogo.jpeg" alt="Amazon.com logo">
-                        </div>
-
-                        <div class="xp-right">
-                            <header class="xp-head">
-                                <div>
-                                    <h3 class="xp-role">Software Development Engineer</h3>
-                                    <p class="xp-company">Amazon.com</p>
-                                </div>
-                                <span class="xp-badge">August 2024 – Present</span>
-                            </header>
-
-                            <ul class="xp-points">
-                                <li>Developed supervised learning algorithms (logistic regression, SVM) to classify document relevance (~80% accuracy) for BERT training.</li>
-                                <li>Built quantitative analysis and visualizations in Python (NumPy, Pandas, Jupyter).</li>
-                                <li>Drove recommendations using Tableau dashboards for e-commerce/media stakeholders.</li>
-                                <li>Projected to raise customer satisfaction by 20% by Q4 2023 via policy changes.</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="xp-card">
-                        <div class="xp-left">
-                            <img src="images/Unity.jpeg" alt="Unity logo">
-                        </div>
-
-                        <div class="xp-right">
-                            <header class="xp-head">
-                                <div>
-                                    <h3 class="xp-role">Fullstack Software Engineer</h3>
-                                    <p class="xp-company">Unity Technologies</p>
-                                </div>
-                                <span class="xp-badge">August 2022 – August 2024</span>
-                            </header>
-
-                            <ul class="xp-points">
-                                <li>Developed supervised learning algorithms (logistic regression, SVM) to classify document relevance (~80% accuracy) for BERT training.</li>
-                                <li>Built quantitative analysis and visualizations in Python (NumPy, Pandas, Jupyter).</li>
-                                <li>Drove recommendations using Tableau dashboards for e-commerce/media stakeholders.</li>
-                                <li>Projected to raise customer satisfaction by 20% by Q4 2023 via policy changes.</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="xp-card">
-                        <div class="xp-left">
-                            <img src="images/Concur1.jpeg" alt="Sap logo">
-                        </div>
-
-                        <div class="xp-right">
-                            <header class="xp-head">
-                                <div>
-                                    <h3 class="xp-role">Software Engineer Intern</h3>
-                                    <p class="xp-company">Sap Concur</p>
-                                </div>
-                                <span class="xp-badge">June 2020 – Feb 2021</span>
-                            </header>
-
-                            <ul class="xp-points">
-                                <li>Developed supervised learning algorithms (logistic regression, SVM) to classify document relevance (~80% accuracy) for BERT training.</li>
-                                <li>Built quantitative analysis and visualizations in Python (NumPy, Pandas, Jupyter).</li>
-                                <li>Drove recommendations using Tableau dashboards for e-commerce/media stakeholders.</li>
-                                <li>Projected to raise customer satisfaction by 20% by Q4 2023 via policy changes.</li>
-                            </ul>
-                        </div>
-                    </article>
+          <!-- Panels for other tabs (placeholders; keep hidden via CSS or JS later) -->
+          <div id="panel-ml" role="tabpanel" aria-labelledby="tab-ml" hidden>
+            <div class="skills-grid">
+              <article class="skill-card" aria-label="Pandas">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">P</div>
+                  <h3 class="skill-name">Pandas</h3>
                 </div>
-            </section>
-            <!-- ===== Projects ===== -->
-            <section id="projects" class="projects" aria-label="Projects">
-            <div class="container">
-                <h1>Projects</h1>
-
-                <div class="proj-grid">
-                <!-- === Card 1 === -->
-                <article class="proj-card">
-                    <figure class="proj-media">
-                    <img src="images/RPSGame.jpeg" alt="Rock, Paper, Scissors game image">
-                    </figure>
-
-                    <div class="proj-body">
-                    <header class="proj-head">
-                        <h3 class="proj-title">Rock, Paper, Scissors Game</h3>
-                        <p class="proj-subtitle">Frontend Project</p>
-                    </header>
-
-                    <p class="proj-desc">
-                        Description
-                    </p>
-
-                    <ul class="proj-tags" aria-label="Technologies used">
-                        <li>Javascript</li><li>ReactJS</li><li></li><li>FastAPI</li><li>Hugging Face</li>
-                    </ul>
-
-                    <div class="proj-outcomes">
-                        <h4>Outcomes:</h4>
-                        <ul>
-                        <li>1. </li>
-                        <li>2. </li>
-                        <li>3. </li>
-                        </ul>
-                    </div>
-                    </div>
-
-                    <footer class="proj-foot">
-                    <a class="btn btn-primary" href="https://shreyalpanand98.github.io/rock-paper-scissors-game/" target="_blank" rel="noopener">
-                        View Project
-                        <span aria-hidden="true">↗</span>
-                    </a>
-                    </footer>
-                </article>
-
-                <!-- === Card 2 === -->
-                <article class="proj-card">
-                    <figure class="proj-media">
-                    <img src="images/PlaceholderImg.jpg" alt="Medical visualization of lungs for COPD analysis project">
-                    </figure>
-
-                    <div class="proj-body">
-                    <header class="proj-head">
-                        <h3 class="proj-title">ABCD</h3>
-                        <p class="proj-subtitle"> &amp; ABCD</p>
-                    </header>
-
-                    <p class="proj-desc">
-                        Description
-                    </p>
-
-                    <ul class="proj-tags" aria-label="Technologies used">
-                        <li>Python</li><li>Statistical Modeling</li><li>Random Forest</li><li>GLM</li>
-                    </ul>
-
-                    <div class="proj-outcomes">
-                        <h4>Outcomes:</h4>
-                        <ul>
-                        <li>1. </li>
-                        <li>2. </li>
-                        <li>3. </li>
-                        </ul>
-                    </div>
-                    </div>
-
-                    <footer class="proj-foot">
-                    <a class="btn btn-primary" href="https://example.com/copd" target="_blank" rel="noopener">
-                        View Project
-                        <span aria-hidden="true">↗</span>
-                    </a>
-                    </footer>
-                </article>
+              </article>
+              <article class="skill-card" aria-label="PyTorch">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">PT</div>
+                  <h3 class="skill-name">PyTorch</h3>
                 </div>
+              </article>
+              <article class="skill-card" aria-label="NumPy">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">NP</div>
+                  <h3 class="skill-name">NumPy</h3>
+                </div>
+              </article>
+              <article class="skill-card" aria-label="RMarkdown">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">R</div>
+                  <h3 class="skill-name">R Markdown</h3>
+                </div>
+              </article>
             </div>
-            </section>
-            <!-- ===== Skills ===== -->
-            <section id="skills" class="skills" aria-label="Skills">
-            <div class="container">
-                <h1>Skills</h1>
-                <p class="skills-tagline">Technical skills and tools I specialize in</p>
+          </div>
 
-                <!-- Tabs (static HTML; style/JS optional) -->
-                <nav class="skills-tabs" role="tablist" aria-label="Skill categories">
-                <button role="tab" aria-selected="true" aria-controls="panel-programming" id="tab-programming" class="tab is-active">
-                    Programming
-                </button>
-                <button role="tab" aria-selected="false" aria-controls="panel-ml" id="tab-ml" class="tab" tabindex="-1">
-                    Machine Learning
-                </button>
-                <button role="tab" aria-selected="false" aria-controls="panel-data-tools" id="tab-data-tools" class="tab" tabindex="-1">
-                    Data Tools
-                </button>
-                <button role="tab" aria-selected="false" aria-controls="panel-other" id="tab-other" class="tab" tabindex="-1">
-                    Other
-                </button>
-                </nav>
-
-                <!-- Panel: Programming (visible by default) -->
-                <div id="panel-programming" role="tabpanel" aria-labelledby="tab-programming">
-                <div class="skills-grid">
-                    <!-- Card -->
-                    <article class="skill-card" aria-label="Python">
-                    <div class="skill-card-inner">
-                        <div class="skill-icon" aria-hidden="true">P</div>
-                        <h3 class="skill-name">Python</h3>
-                    </div>
-                    </article>
-
-                    <article class="skill-card" aria-label="R">
-                    <div class="skill-card-inner">
-                        <div class="skill-icon" aria-hidden="true">R</div>
-                        <h3 class="skill-name">R</h3>
-                    </div>
-                    </article>
-
-                    <article class="skill-card" aria-label="SQL">
-                    <div class="skill-card-inner">
-                        <div class="skill-icon" aria-hidden="true">S</div>
-                        <h3 class="skill-name">SQL</h3>
-                    </div>
-                    </article>
-
-                    <article class="skill-card" aria-label="Java">
-                    <div class="skill-card-inner">
-                        <div class="skill-icon" aria-hidden="true">J</div>
-                        <h3 class="skill-name">Java</h3>
-                    </div>
-                    </article>
-
-                    <article class="skill-card" aria-label="C++">
-                    <div class="skill-card-inner">
-                        <div class="skill-icon" aria-hidden="true">C</div>
-                        <h3 class="skill-name">C++</h3>
-                    </div>
-                    </article>
-
-                    <article class="skill-card" aria-label="HTML/CSS">
-                    <div class="skill-card-inner">
-                        <div class="skill-icon" aria-hidden="true">H</div>
-                        <h3 class="skill-name">HTML/CSS</h3>
-                    </div>
-                    </article>
-
-                    <article class="skill-card" aria-label="JavaScript">
-                    <div class="skill-card-inner">
-                        <div class="skill-icon" aria-hidden="true">J</div>
-                        <h3 class="skill-name">JavaScript</h3>
-                    </div>
-                    </article>
+          <div
+            id="panel-data-tools"
+            role="tabpanel"
+            aria-labelledby="tab-data-tools"
+          >
+            <div class="skills-grid">
+              <article class="skill-card" aria-label="PostgreSQL">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">P</div>
+                  <h3 class="skill-name">PostgreSQL</h3>
                 </div>
+              </article>
+              <article class="skill-card" aria-label="Pandas">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">PD</div>
+                  <h3 class="skill-name">Pandas</h3>
                 </div>
+              </article>
 
-                <!-- Panels for other tabs (placeholders; keep hidden via CSS or JS later) -->
-                <div id="panel-ml" role="tabpanel" aria-labelledby="tab-ml" hidden>
-                    <div class="skills-grid">
-                        <article class="skill-card" aria-label="Pandas">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">P</div>
-                                <h3 class="skill-name">Pandas</h3>
-                            </div>
-                        </article>
-                        <article class="skill-card" aria-label="PyTorch">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">PT</div>
-                                <h3 class="skill-name">PyTorch</h3>
-                            </div>
-                        </article>
-                        <article class="skill-card" aria-label="NumPy">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">NP</div>
-                                <h3 class="skill-name">NumPy</h3>
-                            </div>
-                        </article>
-                        <article class="skill-card" aria-label="RMarkdown">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">R</div>
-                                <h3 class="skill-name">R Markdown</h3>
-                            </div>
-                        </article>
-                    </div>
+              <article class="skill-card" aria-label="GraphQL">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">G</div>
+                  <h3 class="skill-name">GraphQL</h3>
                 </div>
+              </article>
 
-                <div id="panel-data-tools" role="tabpanel" aria-labelledby="tab-data-tools">
-                    <div class="skills-grid">
-                        <article class="skill-card" aria-label="PostgreSQL">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">P</div>
-                                <h3 class="skill-name">PostgreSQL</h3>
-                            </div>
-                        </article>
-                        <article class="skill-card" aria-label="Pandas">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">PD</div>
-                                <h3 class="skill-name">Pandas</h3>
-                            </div>
-                        </article>
-
-                        <article class="skill-card" aria-label="GraphQL">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">G</div>
-                                <h3 class="skill-name">GraphQL</h3>
-                            </div>
-                        </article>
-
-                        <article class="skill-card" aria-label="DynamoDB">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">D</div>
-                                <h3 class="skill-name">DynamoDB</h3>
-                            </div>
-                        </article>
-
-                        <article class="skill-card" aria-label="MongoDB">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">M</div>
-                                <h3 class="skill-name">MongoDB</h3>
-                            </div>
-                        </article>
-
-                        <article class="skill-card" aria-label="AWS">
-                        <div class="skill-card-inner">
-                            <div class="skill-icon" aria-hidden="true">A</div>
-                            <h3 class="skill-name">AWS</h3>
-                        </div>
-                        </article>
-
-                        <article class="skill-card" aria-label="Tableau">
-                        <div class="skill-card-inner">
-                            <div class="skill-icon" aria-hidden="true">T</div>
-                            <h3 class="skill-name">Tableau</h3>
-                        </div>
-                        </article>
-
-                        <article class="skill-card" aria-label="Power BI">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">P</div>
-                                <h3 class="skill-name">Power BI</h3>
-                            </div>
-                        </article>
-                    </div>
-                    </div>
-
-                <div id="panel-other" role="tabpanel" aria-labelledby="tab-other" hidden>
-                    <div class="skills-grid">
-                        <article class="skill-card" aria-label="">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">D</div>
-                                <h3 class="skill-name">Docker</h3>
-                            </div>
-                        </article>
-                        <article class="skill-card" aria-label="RestAPI">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">R</div>
-                                <h3 class="skill-name">RestAPI</h3>
-                            </div>
-                        </article>
-                         <article class="skill-card" aria-label="Junit">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">JU</div>
-                                <h3 class="skill-name">JUnit Testing</h3>
-                            </div>
-                        </article>
-                        <article class="skill-card" aria-label="Mockito">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">M</div>
-                                <h3 class="skill-name">Mockito</h3>
-                            </div>
-                        </article>
-                        <article class="skill-card" aria-label="git">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">G</div>
-                                <h3 class="skill-name">GitHub</h3>
-                            </div>
-                        </article>
-                        <article class="skill-card" aria-label="jira">
-                            <div class="skill-card-inner">
-                                <div class="skill-icon" aria-hidden="true">J</div>
-                                <h3 class="skill-name">JIRA</h3>
-                            </div>
-                        </article>
-                    </div>
+              <article class="skill-card" aria-label="DynamoDB">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">D</div>
+                  <h3 class="skill-name">DynamoDB</h3>
                 </div>
+              </article>
+
+              <article class="skill-card" aria-label="MongoDB">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">M</div>
+                  <h3 class="skill-name">MongoDB</h3>
+                </div>
+              </article>
+
+              <article class="skill-card" aria-label="AWS">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">A</div>
+                  <h3 class="skill-name">AWS</h3>
+                </div>
+              </article>
+
+              <article class="skill-card" aria-label="Tableau">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">T</div>
+                  <h3 class="skill-name">Tableau</h3>
+                </div>
+              </article>
+
+              <article class="skill-card" aria-label="Power BI">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">P</div>
+                  <h3 class="skill-name">Power BI</h3>
+                </div>
+              </article>
             </div>
-            </section>
-        </main>
+          </div>
 
-        <footer>
-            <p style="text-align:center; color:#555; padding:1rem 0;">© 2025 Shreyal</p>
-        </footer>
+          <div
+            id="panel-other"
+            role="tabpanel"
+            aria-labelledby="tab-other"
+            hidden
+          >
+            <div class="skills-grid">
+              <article class="skill-card" aria-label="">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">D</div>
+                  <h3 class="skill-name">Docker</h3>
+                </div>
+              </article>
+              <article class="skill-card" aria-label="RestAPI">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">R</div>
+                  <h3 class="skill-name">RestAPI</h3>
+                </div>
+              </article>
+              <article class="skill-card" aria-label="Junit">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">JU</div>
+                  <h3 class="skill-name">JUnit Testing</h3>
+                </div>
+              </article>
+              <article class="skill-card" aria-label="Mockito">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">M</div>
+                  <h3 class="skill-name">Mockito</h3>
+                </div>
+              </article>
+              <article class="skill-card" aria-label="git">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">G</div>
+                  <h3 class="skill-name">GitHub</h3>
+                </div>
+              </article>
+              <article class="skill-card" aria-label="jira">
+                <div class="skill-card-inner">
+                  <div class="skill-icon" aria-hidden="true">J</div>
+                  <h3 class="skill-name">JIRA</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      />
 
-        <script src="skills.js"></script>
-    </body>
+      <section id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <header>
+            <h1 id="contact-title">Contact Me</h1>
+            <p class="lead">Get in touch for opportunities or collaborations</p>
+          </header>
+
+          <div class="contact-grid">
+            <!-- Left: Message Form -->
+            <article class="card contact-form" aria-labelledby="form-title">
+              <h3 id="form-title">Send Me a Message</h3>
+              <p class="muted">
+                Fill out the form below and I'll get back to you as soon as
+                possible.
+              </p>
+
+              <!--
+                        ACTION ideas:
+                        - Formspree (no backend): action="https://formspree.io/f/your-id"
+                        - Your own endpoint: action="/api/contact"
+                        -->
+              <form class="form" action="#" method="post" novalidate>
+                <div class="row">
+                  <div class="field">
+                    <label for="name">Name</label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="Your Name"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="your.email@example.com"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="subject">Subject</label>
+                  <input
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    placeholder="Subject"
+                    required
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="7"
+                    placeholder="Your message..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  Send Message
+                </button>
+              </form>
+            </article>
+
+            <!-- Right: Contact Info -->
+            <aside class="card contact-info" aria-labelledby="info-title">
+              <h3 id="info-title">Contact Information</h3>
+              <p class="muted">Alternative ways to reach me</p>
+
+              <ul class="info-list" role="list">
+                <li class="info-item">
+                  <span class="info-icon" aria-hidden="true">
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                  <div class="info-text">
+                    <div class="label">Email</div>
+                    <a href="mailto:shreyalpanand98@gmail.com"
+                      >shreyalpanand98@gmail.com</a
+                    >
+                  </div>
+                </li>
+
+                <li class="info-item">
+                  <span class="info-icon" aria-hidden="true">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </span>
+                  <div class="info-text">
+                    <div class="label">LinkedIn</div>
+                    <a
+                      href="https://www.linkedin.com/in/shreyalanand"
+                      target="_blank"
+                      rel="noopener"
+                      >linkedin.com/in/shreyalanand</a
+                    >
+                  </div>
+                </li>
+
+                <li class="info-item">
+                  <span class="info-icon" aria-hidden="true">
+                    <i class="fa-solid fa-phone"></i>
+                  </span>
+                  <div class="info-text">
+                    <div class="label">Phone</div>
+                    <a href="tel:+12064076093">+1 (206) 407-6093</a>
+                  </div>
+                </li>
+
+                <li class="info-item">
+                  <span class="info-icon" aria-hidden="true">
+                    <i class="fa-brands fa-github"></i>
+                  </span>
+                  <div class="info-text">
+                    <div class="label">GitHub</div>
+                    <a
+                      href="https://github.com/shreyalpanand98"
+                      target="_blank"
+                      rel="noopener"
+                      >github.com/shreyalpanand98</a
+                    >
+                  </div>
+                </li>
+              </ul>
+
+              <!-- Download Buttons -->
+              <div class="downloads">
+                <a
+                  class="btn btn-ghost"
+                  href="assets/shreyal_resume_amz.pdf"
+                  download
+                >
+                  <i class="fa-solid fa-download" aria-hidden="true"></i>
+                  <span>Download Resume</span>
+                </a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p style="text-align: center; color: #555; padding: 1rem 0">
+        © 2025 Shreyal
+      </p>
+    </footer>
+
+    <script src="skills.js"></script>
+  </body>
 </html>
